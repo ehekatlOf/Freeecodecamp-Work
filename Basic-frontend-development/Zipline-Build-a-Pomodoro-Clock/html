@@ -1,0 +1,30 @@
+<html>
+
+
+<h1 class='text-center'>Pomodoro timer</h1>
+
+<div class='row text-center'>
+  <div class='col-xs-6'>
+    <h4 class='work'>WORK</h4>
+  <h3>
+    <a id='workMinus'>-</a>
+    <span id ='workMinutes'></span>
+    <a id='workPlus'>+</a>
+  </h3>
+  </div>
+
+  <div class='col-xs-6'>
+    <h4 class='break'>BREAK</h4>
+  <h3>
+    <a id='breakMinus'>-</a>
+    <span id ='breakMinutes'></span>
+    <a id='breakPlus'>+</a>
+  </h3>
+  </div>
+</div>
+  
+<div class='text-center top-row'>
+  <h2><span id = 'timerStatus'>WORK</span></h2>
+  <h3><span>changeMe</span><h3>
+</div>
+    
