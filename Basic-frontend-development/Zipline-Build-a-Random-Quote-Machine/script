@@ -1,0 +1,22 @@
+$(document).ready(function(){
+combine();
+
+function combine () {
+var quotes = ["See, the world is full of things more powerful than us. But if you know how to catch a ride, you can go places ― %Neal Stephenson, Snow Crash",
+              "Until a man is twenty-five, he still thinks, every so often, that under the right circumstances he could be the baddest motherfucker in the world. If I moved to a martial-arts monastery in China and studied real hard for ten years. If my family was wiped out by Colombian drug dealers and I swore myself to revenge. If I got a fatal disease, had one year to live, and devoted it to wiping out street crime. If I just dropped out and devoted my life to being bad. ― %Neal Stephenson, Snow Crash",
+              "..this is just like life must be for about 99 percent of the people in the world. You're in this place. There's other people all around you, but they don't understand you and you don't understand them, but people do a lot of pointless babbling anyway. In order to stay alive, you have to spend all day every day doing stupid meaningless work. And the only way to get out of it is to quit, cut loose, take a flyer, and go off into the wicked world, where you will be swallowed up and never heard from again. ― %Neal Stephenson, Snow Crash",
+              "We are all susceptible to the pull of viral ideas. Like mass hysteria. Or a tune that gets into your head that you keep humming all day until you spread it to someone else. Jokes. Urban legends. Crackpot religions. Marxism. No matter how smart we get, there is always this deep irrational part that makes us potential hosts for self-replicating information. ― %Neal Stephenson, Snow Crash",
+            ];
+            
+pull = Math.floor(Math.random()*quotes.length);
+
+$(".saying").text(quotes[pull].split("%")[0]);
+$(".author").text(quotes[pull].split("%")[1]);
+}
+	
+$(".btn").click(function(){
+	combine();
+})
+
+
+})
