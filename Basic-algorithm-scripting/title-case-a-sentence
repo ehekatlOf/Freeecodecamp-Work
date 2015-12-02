@@ -1,0 +1,14 @@
+function titleCase(str) {
+    var doge = str.split(" ");
+    var shibe = [];
+
+    for(i=0;i<doge.length;i++){
+        shibe.push(
+            doge[i].charAt(0).toUpperCase() +
+            doge[i].slice(1,doge[i].length).toLowerCase());
+        }
+    
+
+return(shibe.join(" "));
+}
+titleCase("I'm a little tea pot");
