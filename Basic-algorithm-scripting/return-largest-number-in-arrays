@@ -1,0 +1,9 @@
+var arr = [];
+function largestOfFour(kara) {
+    for (i=0;i<kara.length;i++) {
+    kara[i].sort(function(a,b){return b-a});
+    arr.push(kara[i][0]);
+    }
+    
+  return arr;
+}
