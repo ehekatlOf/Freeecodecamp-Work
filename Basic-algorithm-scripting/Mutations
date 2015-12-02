@@ -1,0 +1,39 @@
+function mutation(arr) {
+    
+    arr.sort(function(a,b){
+        return a.length-b.length;
+    });
+    
+    kara = arr[0].toLowerCase().split("");
+    ara = arr [1].toLowerCase().split("");
+    
+    i=0;
+    key = [];
+    while (i<kara.length) {
+        key.push(ara.indexOf(kara[i]));
+        i++;
+    }
+
+    key.sort(function(a,b){
+        return a-b;
+    });
+
+
+    
+    if (key[0]<0) {
+        return false;
+    }
+        
+    else {
+        return true;
+    }
+    
+    
+    
+}
+    
+
+
+    
+
+mutation(["hello", "hey"]);
