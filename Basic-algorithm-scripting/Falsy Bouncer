@@ -1,0 +1,19 @@
+function bouncer(arr) {
+
+    kara = [];
+    ara = [];
+
+        for(i = 0; i <arr.length; i++) {
+            kara.push(Boolean(arr[i]));
+        }
+    
+        for(j=0; j<kara.length; j++) {
+            if (kara[j]) {
+                ara.push(arr[j]);
+            }
+        }
+    
+    return(ara);
+}
+
+bouncer([7, "ate", "", false, 9]);
