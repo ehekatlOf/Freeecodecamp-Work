@@ -1,0 +1,9 @@
+$(document).ready(function() {
+
+timer = setInterval(zero, timeRemaining);
+timeDisplay = timerRemaining
+timeRemaining = timeSeconds * 1000;
+  
+clickPlus = Document.getElementById('workMinus');
+clickMinus = Document.getElementById('workMinus');
+  
