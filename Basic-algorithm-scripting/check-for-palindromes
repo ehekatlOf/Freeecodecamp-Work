@@ -1,0 +1,16 @@
+function palindrome(str) {
+  var str1 = str.replace(/\W/ig,"").replace(/_/ig,"").toLowerCase();
+  var reverse = str.replace(/\W/ig,"").replace(/_/ig,"").split("").reverse().join("").toLowerCase();
+  
+  if (reverse == str1) {
+      return true;
+  }
+  
+  else {
+      return false;
+  }
+}
+
+
+
+palindrome("not a palindrome");
