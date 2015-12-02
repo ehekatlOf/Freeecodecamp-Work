@@ -1,0 +1,22 @@
+function truncate(str, num) {
+
+    var kara = str.slice(0,num);
+    var ara = str.slice(0,num-3) + "...";
+    var nul = str.charAt(0) + "...";
+    
+    if (num>=str.length) {
+        return (kara);
+    }
+    
+    else if (num<=3) {
+        return (nul);
+    }
+
+    else {
+        return (ara);
+    }
+    
+  return(kara);
+}
+
+truncate("A-", 1);
