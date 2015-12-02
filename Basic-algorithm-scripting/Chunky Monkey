@@ -1,0 +1,25 @@
+function chunk(arr, size) {
+
+    var i=0;
+
+    if ((arr.length)%size===0) {
+        while (i<(arr.length+1)/size) {
+            arr.push(arr.splice(0,size));
+            i++;
+        }
+    return arr;
+    }
+
+    else {
+        while (i<(arr.length+1)/size) {
+            arr.push(arr.splice(0,size));
+            i++;
+            arr.push(arr.splice(0,arr.length -1));
+    }
+    
+    return arr;
+    }
+}
+
+
+chunk([0, 1, 2, 3, 4, 5], 2);
