@@ -1,0 +1,14 @@
+function repeat(str, num) {
+
+var kara = [];
+
+for(i=1;i<num+1;i++) {
+    kara.push(str);
+}
+
+var ara = kara.join("");
+
+  return ara;
+}
+
+repeat("abc", 3);
