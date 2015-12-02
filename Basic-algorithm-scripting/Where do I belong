@@ -1,0 +1,23 @@
+function where(arr, num) {
+
+    arr.sort(function(a,b){return a-b});
+    
+    for (var i in arr) {
+        
+        if(arr[arr.length - 1]<=num) {
+            return arr.length;
+        }
+
+        else if (arr[i]>=num ) {
+            return(arr.indexOf(arr[i]));
+        }        
+        
+
+    }
+
+  
+
+}
+
+
+where([2, 5, 10], 15);
