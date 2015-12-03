@@ -7,24 +7,23 @@
   <div class='col-xs-6'>
     <h4 class='work'>WORK</h4>
   <h3>
-    <a id='workMinus'>-</a>
+    <button class = 'btn'><a id='workMinus'>-</a></button>
     <span id ='workMinutes'></span>
-    <a id='workPlus'>+</a>
+    <button class = 'btn'><a id='workPlus'>+</a></button>
   </h3>
   </div>
 
   <div class='col-xs-6'>
     <h4 class='break'>BREAK</h4>
   <h3>
-    <a id='breakMinus'>-</a>
+    <button class = 'btn'><a id='breakMinus'>-</a></button>
     <span id ='breakMinutes'></span>
-    <a id='breakPlus'>+</a>
+    <button class = 'btn'><a id='breakPlus'>+</a></button>
   </h3>
   </div>
 </div>
   
-<div class='text-center top-row'>
+<div class='text-center' id='status'>
   <h2><span id = 'timerStatus'>WORK</span></h2>
   <h3><span>changeMe</span><h3>
 </div>
-    
