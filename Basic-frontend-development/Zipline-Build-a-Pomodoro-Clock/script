@@ -2,11 +2,13 @@ $(document).ready(function() {
 
 
 timer = setInterval(zero, timeRemaining);
-timeDisplay = timerRemaining
 timeRemaining = timeSeconds * 1000;
-  
+timeDisplay = timerRemaining  ;
+
+workAudio = new Audio ('http://www.rpgamer.com/games/ff/ff7/sounds/wav/limit.wav');
+breakAudio = new Audio ('http://www.rpgamer.com/games/ff/ff7/sounds/wav/bring.wav')
+
 function zero () {
-  
   
 }
   
@@ -30,3 +32,8 @@ $('#workMinus').click(function() {
 $('#workPlus').click(function() {
 
 });
+  
+$('button').click(function() {
+  workAudio.play;
+  alert('hOI!');
+});  
