@@ -1,16 +1,21 @@
 $(document).ready(function() {
 
+workAudio = new Audio('http://oringz.com/oringz-uploads/sounds-867-lovely.mp3');
+breakAudio = new Audio('http://oringz.com/oringz-uploads/sounds-935-attention-seeker.mp3');
+
+
+  
+$('button').click(function() {
+    workAudio.play();
+});    
 
 timer = setInterval(zero, timeRemaining);
 timeRemaining = timeSeconds * 1000;
-timeDisplay = timerRemaining  ;
-
-workAudio = new Audio ('http://www.rpgamer.com/games/ff/ff7/sounds/wav/limit.wav');
-breakAudio = new Audio ('http://www.rpgamer.com/games/ff/ff7/sounds/wav/bring.wav')
-
+timeDisplay = timerRemaining;    
+  
 function zero () {
   
-}
+};
   
 clickPlus = Document.getElementById('workMinus');
 clickMinus = Document.getElementById('workMinus');
@@ -33,7 +38,6 @@ $('#workPlus').click(function() {
 
 });
   
-$('button').click(function() {
-  workAudio.play;
-  alert('hOI!');
-});  
+
+  
+});
