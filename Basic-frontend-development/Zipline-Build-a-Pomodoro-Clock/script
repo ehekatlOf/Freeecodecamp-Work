@@ -1,14 +1,43 @@
-$(document).ready(function() {
+breakTimer = 5;
+workTimer = 25;
+
+// Timer Controls //
+
+$('#breakMinutes').text(breakTimer);
+$('#workMinutes').text(workTimer);
+
+function clickBreakMinus () {
+  if (breakTimer > 1) {
+    breakTimer = breakTimer - 1;
+    $('#breakMinutes').text(breakTimer);
+  };
+};
+$('#breakMinus').click(clickBreakMinus);
+
+function clickBreakPlus () {
+  breakTimer = breakTimer + 1;
+  $('#breakMinutes').text(breakTimer);
+};
+$('#breakPlus').click(clickBreakPlus);
+
+function clickWorkMinus () {
+    if (workTimer > 1) {
+      workTimer = workTimer - 1;
+      $('#workMinutes').text(workTimer);
+    };
+};
+$('#workMinus').click(clickWorkMinus);
+
+function clickWorkPlus () {
+    workTimer = workTimer + 1;
+    $('#workMinutes').text(workTimer);
+};
+$('#workPlus').click(clickWorkPlus);
+
 
 workAudio = new Audio('http://oringz.com/oringz-uploads/sounds-867-lovely.mp3');
 breakAudio = new Audio('http://oringz.com/oringz-uploads/sounds-935-attention-seeker.mp3');
-
-
   
-$('button').click(function() {
-    workAudio.play();
-});    
-
 timer = setInterval(zero, timeRemaining);
 timeRemaining = timeSeconds * 1000;
 timeDisplay = timerRemaining;    
@@ -20,24 +49,5 @@ function zero () {
 clickPlus = Document.getElementById('workMinus');
 clickMinus = Document.getElementById('workMinus');
 
-//timer manipulations//  
-  
-$('#breakMinus').click(function() {
-
-});
-  
-$('#breakPlus').click(function() {
-
-});
-  
-$('#workMinus').click(function() {
-
-});
-  
-$('#workPlus').click(function() {
-
-});
-  
 
   
-});
