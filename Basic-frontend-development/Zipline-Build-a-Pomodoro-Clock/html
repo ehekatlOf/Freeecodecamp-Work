@@ -1,24 +1,24 @@
 <html>
 
-
+<body class = 'background'>
 <h1 class='text-center'>Pomodoro timer</h1>
 
 <div class='row text-center'>
   <div class='col-xs-6'>
     <h4 class='work'>WORK</h4>
   <h3>
-    <button class = 'btn'><a id='workMinus'>-</a></button>
+    <button class = 'btn' id = 'workMinus'>-</button>
     <span id ='workMinutes'></span>
-    <button class = 'btn'><a id='workPlus'>+</a></button>
+    <button class = 'btn' id = 'workPlus'>+</button>
   </h3>
   </div>
 
   <div class='col-xs-6'>
     <h4 class='break'>BREAK</h4>
   <h3>
-    <button class = 'btn'><a id='breakMinus'>-</a></button>
+    <button class = 'btn breakMinus' id = 'breakMinus'>-</button>
     <span id ='breakMinutes'></span>
-    <button class = 'btn'><a id='breakPlus'>+</a></button>
+    <button class = 'btn' id = 'breakPlus'>+</button>
   </h3>
   </div>
 </div>
@@ -27,3 +27,6 @@
   <h2><span id = 'timerStatus'>WORK</span></h2>
   <h3><span>changeMe</span><h3>
 </div>
+
+</body>    
+</html>
