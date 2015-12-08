@@ -24,6 +24,7 @@ function clickWorkMinus () {
     if (workTimer > 1) {
       workTimer = workTimer - 1;
       $('#workMinutes').text(workTimer);
+      $('#timerTime').text(workTimer + ":00");
     };
 };
 $('#workMinus').click(clickWorkMinus);
@@ -31,18 +32,26 @@ $('#workMinus').click(clickWorkMinus);
 function clickWorkPlus () {
     workTimer = workTimer + 1;
     $('#workMinutes').text(workTimer);
+    $('#timerTime').text(workTimer + ":00");
 };
 $('#workPlus').click(clickWorkPlus);
 
+//timer information//
+
+$('#timerTime').text(workTimer);
+
+$('clickStart').click(timer);
+
+function timer = setInterval(downCount, 5000); 
+
+downCount = 
 
 workAudio = new Audio('http://oringz.com/oringz-uploads/sounds-867-lovely.mp3');
 breakAudio = new Audio('http://oringz.com/oringz-uploads/sounds-935-attention-seeker.mp3');
   
-timer = setInterval(zero, timeRemaining);
-timeRemaining = timeSeconds * 1000;
-timeDisplay = timerRemaining;    
+
   
-function zero () {
+function downCount () {
   
 };
   
