@@ -1,0 +1,35 @@
+function sumPrimes(num) {
+
+set = [];
+test = [2];
+
+for(var i = 2; i<=num; i++) {
+    set.push(i);
+}
+
+function rec(i) {
+    if (i >= set.length || i < 0) {
+        return;
+    }
+    
+    else {
+        tested = test.every(function(element){
+          return set[i] % element !== 0;
+        });
+
+        if (tested === true) {
+            test.push(set[i]);
+        }
+        
+        i = i + 1;
+        rec(i);
+    }
+}
+
+rec(0);
+return test.reduce(function(a,b) {
+    return a+b;
+});
+}
+
+sumPrimes(10);
