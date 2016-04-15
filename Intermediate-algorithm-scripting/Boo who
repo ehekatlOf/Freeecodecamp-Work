@@ -1,0 +1,17 @@
+function boo(bool) {
+    if (bool == false) {
+        return true;
+    }
+    
+    else if (bool == true &&  bool !== 1) {
+        return true;
+    }
+    
+    else {
+        return false;
+    }
+
+
+}
+
+boo([1, 2, 3]);
