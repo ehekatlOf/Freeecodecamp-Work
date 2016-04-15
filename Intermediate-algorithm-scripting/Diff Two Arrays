@@ -1,0 +1,16 @@
+function diff(arr1, arr2) {
+
+  aRR1 = arr1.filter(function(element,index,array){
+    return arr2.indexOf(element) == -1;
+  });
+  
+  aRR2 = arr2.filter(function(element,index,array){
+    return arr1.indexOf(element) == -1;
+  });
+  
+  return aRR1.concat(aRR2);
+
+}
+
+diff(["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
+["diorite", "andesite", "grass", "dirt", "dead shrub"]);
