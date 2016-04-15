@@ -1,0 +1,21 @@
+function translate(str) {
+    
+    var data = arguments[0].split("");
+    
+    for (var i in data) {
+        
+        if (data[0] == "a" || data[0] == "e" ||data[0] == "i" || data[0] == "o" || data[0] == "u") {
+            return (data.join("") + "way");
+        }
+        
+        else if (data[i] == "a" || data[i] == "e" ||data[i] == "i" || data[i] == "o" || data[i] == "u") {
+            return (data.slice(i).join("") + data.slice(0,i).join("") + "ay");
+        }
+           
+    }
+ 
+}
+
+
+
+translate("blam");
