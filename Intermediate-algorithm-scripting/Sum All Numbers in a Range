@@ -1,0 +1,12 @@
+function sumAll(arr) {
+  var extended = [];    
+  var a = Math.min(arr[0],arr[1]);
+  var b = Math.max(arr[0],arr[1]);
+  for (i = a; i <= b; i++) {
+    extended.push(i);
+  }
+  var condensed = extended.reduce(function(a,b){return a+b});
+  return condensed;
+}
+
+sumAll([1, 4]);
