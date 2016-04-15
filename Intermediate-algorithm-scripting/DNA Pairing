@@ -1,0 +1,22 @@
+function pair(str) {
+
+    unstring = str.split("");
+    
+    for (var i in unstring) {
+        switch (unstring[i]) {
+            case "G": unstring[i] = ["G", "C"];
+                break;
+            case "T": unstring[i] = ["T", "A"];
+                break;
+            case "C": unstring[i] = ["C", "G"];
+                break;
+            case "A": unstring[i] = ["A", "T"];
+                break;
+        }
+
+    }
+    
+    return unstring;
+}
+
+pair("ATCGA");
