@@ -1,0 +1,32 @@
+// noprotect
+function smallestCommons(arr) {
+
+    arguments[0].sort(function(a,b){
+        return a-b;
+    });
+    
+    var start = arguments[0][0];
+    var end = arguments[0][1];
+    var total = 1;
+    var oneRing = true;
+    
+    for (var i = end; i >= 1; i--) {
+        total = i * total;
+    }
+    
+    
+    for (var j = end; j <= total; j++) {
+        oneRing = true;
+        for (var k = start; k <= end; k++) {
+            if (j % k !== 0) {
+                oneRing = false;
+            }
+        }
+        
+        if (oneRing === true) {
+            return j;
+        }
+    }
+
+}
+smallestCommons([1,13]);
