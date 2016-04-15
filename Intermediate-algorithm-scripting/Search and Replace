@@ -1,0 +1,22 @@
+function myReplace(str, before, after) {
+    var data = arguments[0];
+    var first = arguments[1];  
+    var last = arguments[2];
+
+    if (first.charAt(0) == first.charAt(0).toUpperCase()) {
+        last = last.charAt(0).toUpperCase() + last.slice(1);
+    }
+    
+    else{
+        last = last.charAt(0).toLowerCase() + last.slice(1);
+    }
+  
+
+  
+    return data.replace(first, last);
+  
+  
+
+}
+
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting");
