@@ -1,0 +1,80 @@
+
+
+convert(1023);
+
+function convert(num) {
+  metha = ["C", "X", "I"];
+penta = ["D", "L", "V"];
+deca = ["M", "C", "X"];
+numS =[];
+numL = [];
+assemble = [];
+  
+    var processed = num.toString().split("");
+    numW = processed.map(function (key){
+        return parseInt(key);
+    });
+    if (numW.length == 2){
+        numW.unshift("");
+    }
+    else if (numW.length == 1){
+        numW.unshift("");
+        numW.unshift("");        
+    }
+    if (numW.length >= 4){
+        numS = numW.slice(1);
+        numL = numW.slice(0,1);
+    }
+    else {
+        numS = numW;
+    }
+
+    for (i = numS.length - 1; i >= 0; i--) {
+        switch  (numS[i]) {
+        case 1:
+            assemble.unshift(metha[i]);
+            break;
+        case 2:
+            assemble.unshift(metha[i] + metha[i]);
+            break;        
+        case 3:
+            assemble.unshift(metha[i] + metha[i] + metha[i]);
+            break;     
+        case 4:
+            assemble.unshift(metha[i] + penta[i]);
+            break;     
+        case 5:
+            assemble.unshift(penta[i]);
+            break;     
+        case 6:
+            assemble.unshift(penta[i] + metha[i]);
+            break;     
+        case 7:
+            assemble.unshift(penta[i] + metha[i] + metha[i]);
+            break;     
+        case 8:
+            assemble.unshift(penta[i] + metha[i] + metha[i] + metha[i]);
+            break;     
+        case 9:
+            assemble.unshift(metha[i] + deca[i]);
+            break;     
+        case 0:
+            assemble.unshift("");
+            break;                 
+        }
+    }
+    
+
+    
+    if (numL == 1) {
+        assemble.unshift("M");
+    }
+    else if (numL == 2) {
+        assemble.unshift("MM");
+    }
+    else if (numL == 3) {
+        assemble.unshift("MMM");
+    }
+    
+    return (assemble.join(""));
+}
