@@ -1,0 +1,21 @@
+function convert(str) {
+    data = str.split("");
+    for (var i in data) {
+        switch(data[i]) {
+            case '&': data[i] = '&amp;';
+            break;
+            case '<': data[i] = '&lt;';
+            break;
+            case '>': data[i] = '&gt;';
+            break;
+            case '"': data[i] = '&quot;';
+            break;
+            case "'": data[i] = '&apos;';
+            break;
+        }
+    }
+    
+    return data.join("");
+}
+
+convert("Shindler's List");
