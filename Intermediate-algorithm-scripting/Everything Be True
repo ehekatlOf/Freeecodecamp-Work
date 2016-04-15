@@ -1,0 +1,38 @@
+function every(collection, pre) {
+
+    var data = collection;
+    var match = pre;
+    var selfDestruct = [];
+    
+    for (var i in data) {
+        
+        if (Object.keys(data[i]).indexOf(match) < 0) {
+            selfDestruct.push(false);
+        }
+        
+        else if (data[i][match] === 0 || data[i][match] === null || data[i][match] === false || data[i][match] == NaN || data[i][match] === "" || data[i][match] === undefined) {
+            selfDestruct.push(false);
+        }
+        
+        else if (data[i][match] == true || data[i][match] === data[i][match].toString()) {
+            selfDestruct.push(true);
+        }
+        
+        else if (isNaN(data[i][match]) == true) {
+            selfDestruct.push(false);
+        }
+    }
+
+    console.log(selfDestruct);
+    console.log(selfDestruct.every(function(element){element == true}));
+
+    if (selfDestruct.every(function(element){return element == true}) === true) {
+        return true;
+    }
+    
+    else{
+        return false;
+    }
+}
+
+every([{"single": "double"}, {"single": NaN}], "single");
