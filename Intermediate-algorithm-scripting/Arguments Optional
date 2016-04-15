@@ -1,0 +1,59 @@
+function add() {
+    
+    function testMe (tested) {
+        if (typeof tested == 'number') {
+            return tested;
+        }
+        
+        else {
+            return 'undefined';
+        }
+    }
+    
+    if (arguments.length > 1) {
+        
+        var a = testMe(arguments[0]);
+        var b = testMe(arguments[1]);
+        
+        if (a == 'undefined') {
+            return undefined;
+        }
+        
+        else if (b == 'undefined') {
+            return undefined;
+        }
+        
+        else {
+            return a + b;
+        }
+    }
+
+    else {
+        
+        var c = testMe(arguments[0]);
+        
+        if (c == 'undefined') {
+            return undefined;
+        }
+        
+        else {
+            return function(argument2) {
+            
+                if (c == 'undefined') {
+                    return undefined;
+                }
+            
+                else if (testMe(argument2) == 'undefined') {
+                    return undefined;
+                }
+            
+                else {
+                    return c + testMe(argument2);
+                }
+            };
+        }
+    }
+
+}
+
+add("http://bit.ly/IqT6zt");
