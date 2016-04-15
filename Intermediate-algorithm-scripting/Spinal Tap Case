@@ -1,0 +1,15 @@
+function spinalCase(str) {
+
+    data = str.replace(/\s/gi,'-').replace(/_/gi,'-').split("");
+    
+    for (var i = 1; i<data.length; i++) {
+        if (data[i] == data[i].toUpperCase() && data[i] != '-' && data[i] != ' ' && data[i-1] != '-' && data[i] != '_' && data[i-1] != '_'){
+            data[i] = data[i] = '-' + data[i];
+        }
+    }
+    
+    return data.join('').toLowerCase();
+
+}
+
+spinalCase("The_Andy_Griffith_Show");
