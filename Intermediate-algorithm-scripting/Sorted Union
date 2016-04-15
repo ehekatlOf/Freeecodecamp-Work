@@ -1,0 +1,28 @@
+function unite(arr1, arr2, arr3) {
+
+    arr = Array.prototype.slice.call(arguments);
+    arrika = [];
+    
+    function rika(i) {
+        if (i >= arr.length) {
+            return;
+        }
+        
+        else {
+            arrika = arrika.concat(arr[i]);
+            i = i+1;
+            rika(i);
+        }
+    }
+    
+    rika(0);
+    
+    console.log(arrika);
+    
+    return arrika.filter(function(element, index){
+        return arrika.indexOf(element) == index;
+    });
+    
+}
+
+unite([1, 3, 2], [1, [5]], [2, [4]]);
