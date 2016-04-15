@@ -1,0 +1,17 @@
+function fearNotLetter(str) {
+
+    data = [];
+    
+    for (var i in str.split("")) {
+        data.push(str.split("")[i].charCodeAt(0));
+    }
+    
+    for (var j in data) {
+        if (data[j] - data[j-1] == 2) {
+            return String.fromCharCode(data[j]-1);
+        }
+    }
+
+}
+
+fearNotLetter("abce");
