@@ -1,0 +1,21 @@
+//data//
+where([{ "a": 1, "b": 2 },
+       { "a": 1 }, 
+       { "a": 1, "b": 2, "c": 2 }],
+//match//       
+       { "a": 1, "b": 2 });
+
+
+
+
+function where(collection, source) {
+
+    var srcKeys = Object.keys(source);
+    console.log(Object.keys(source));
+
+    return collection.filter(function (obj) {
+        return srcKeys.every(function (key) {
+            return obj.hasOwnProperty(key) && obj[key] === source[key];
+        });
+    });
+}
