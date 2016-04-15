@@ -1,0 +1,35 @@
+function steamroller(arr) {
+
+//define vars//
+
+    var data = arr;
+    var set = [];
+    
+//define recursive with boundries as index length of array, and param as array to unnest//    
+    
+    function shovel (array) {
+        
+//loop through all elements of current array//
+        
+        for (var i = 0; i < array.length; i++) {
+
+//check boolean for currrent array, break out array element(s) and redefine recursive parameter//
+
+            if(Array.isArray(array[i]) === true) {
+                shovel(array[i]);
+            }
+            
+//check boolean for currrent array, return array elements in predefined empty set//
+
+            else if(Array.isArray(array[i]) === false) {
+                set.push(array[i]);
+            }            
+        }
+    }
+    
+    shovel(data);
+    
+    return set;
+}
+
+steamroller([[["a","b"]], [["c"]]]);
